@@ -3461,3 +3461,31 @@ using Microsoft.VisualBasic;
 //     Console.WriteLine(file);
 // }
 }
+//! DERS 45: Dosya Yönetimi
+{
+//     string rootPath = Directory.GetCurrentDirectory();
+
+// //* Klasörleri al
+// string[] dirs = Directory.GetDirectories(
+//     rootPath,
+//     "*",
+//     SearchOption.TopDirectoryOnly
+// );
+
+// foreach (string dir in dirs)
+// {
+//     Console.WriteLine(dir);
+// }
+
+// //* Dosyaları al
+// string[] files = Directory.GetFiles(
+//     rootPath,
+//     "*",
+//     SearchOption.AllDirectories
+// );
+
+// foreach (string file in files)
+// {
+//     Console.WriteLine(file);
+// }
+}
