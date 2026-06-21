@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.Metrics;
 using System.IO.Pipelines;
 using Microsoft.VisualBasic;
 
@@ -2078,167 +2079,167 @@ using Microsoft.VisualBasic;
     //         Console.WriteLine("Hatalı İşlem Seçimi. İşlem Sonlandırıldı");
     //     }
     
-//? Bir öğrencinin 2 yazılı 1 sözlü notunu alıp hesaplanan ortalamaya göre not aralığına karşılık gelen not bilgisini yazınız. 0 - 24 → 0 | 25 - 44 → 1 | 45 - 54 → 2 | 55 - 69 → 3 | 70 - 84 → 4 | 85 - 100 → 5
+    //? Bir öğrencinin 2 yazılı 1 sözlü notunu alıp hesaplanan ortalamaya göre not aralığına karşılık gelen not bilgisini yazınız. 0 - 24 → 0 | 25 - 44 → 1 | 45 - 54 → 2 | 55 - 69 → 3 | 70 - 84 → 4 | 85 - 100 → 5
 
-// Console.Write("Birinci Yazılı Notu: ");
-// int exam1 = Convert.ToInt32(Console.ReadLine());
+    // Console.Write("Birinci Yazılı Notu: ");
+    // int exam1 = Convert.ToInt32(Console.ReadLine());
 
-// Console.Write("İkinci Yazılı Notu: ");
-// int exam2 = Convert.ToInt32(Console.ReadLine());
+    // Console.Write("İkinci Yazılı Notu: ");
+    // int exam2 = Convert.ToInt32(Console.ReadLine());
 
-// Console.Write("Sözlü Notu: ");
-// int oralExam = Convert.ToInt32(Console.ReadLine());
+    // Console.Write("Sözlü Notu: ");
+    // int oralExam = Convert.ToInt32(Console.ReadLine());
 
-// int averageGrade = (exam1 + exam2 + oralExam) / 3;
+    // int averageGrade = (exam1 + exam2 + oralExam) / 3;
 
-// if (85 <= averageGrade && averageGrade <= 100)
-//     {
-//         Console.WriteLine(
-//             $"""
-//             Not Ortlamanız: {averageGrade}
-//             Dönem Sonu Notunuz: 5
-//             """
-//         );
-//     } else if (70 <= averageGrade && averageGrade < 85) 
-//         {
-//             Console.WriteLine(
-//                 $"""
-//                 Not Ortlamanız: {averageGrade}
-//                 Dönem Sonu Notunuz: 4
-//                 """
-//             );
-//             } else if (55 <= averageGrade && averageGrade < 70) 
-//             {
-//                 Console.WriteLine(
-//                     $"""
-//                     Not Ortlamanız: {averageGrade}
-//                     Dönem Sonu Notunuz: 3
-//                     """
-//                 );
-//             } else if (45 <= averageGrade && averageGrade < 55) 
-//             {
-//                 Console.WriteLine(
-//                     $"""
-//                     Not Ortlamanız: {averageGrade}
-//                     Dönem Sonu Notunuz: 2
-//                     """
-//                 );
-//             } else if (25 <= averageGrade && averageGrade < 45) 
-//             {
-//                 Console.WriteLine(
-//                     $"""
-//                     Not Ortlamanız: {averageGrade}
-//                     Dönem Sonu Notunuz: 1
-//                     """
-//                 );
-//             } else if (0 <= averageGrade && averageGrade < 25) 
-//             {
-//                 Console.WriteLine(
-//                     $"""
-//                     Not Ortlamanız: {averageGrade}
-//                     Dönem Sonu Notunuz: 0
-//                     """
-//                 );
-//             } else { 
-//                 Console.WriteLine("Not Girişinde Hata Yaptınız. Ortalama Hesaplanamadı.");
-//             }
+    // if (85 <= averageGrade && averageGrade <= 100)
+    //     {
+    //         Console.WriteLine(
+    //             $"""
+    //             Not Ortlamanız: {averageGrade}
+    //             Dönem Sonu Notunuz: 5
+    //             """
+    //         );
+    //     } else if (70 <= averageGrade && averageGrade < 85) 
+    //         {
+    //             Console.WriteLine(
+    //                 $"""
+    //                 Not Ortlamanız: {averageGrade}
+    //                 Dönem Sonu Notunuz: 4
+    //                 """
+    //             );
+    //             } else if (55 <= averageGrade && averageGrade < 70) 
+    //             {
+    //                 Console.WriteLine(
+    //                     $"""
+    //                     Not Ortlamanız: {averageGrade}
+    //                     Dönem Sonu Notunuz: 3
+    //                     """
+    //                 );
+    //             } else if (45 <= averageGrade && averageGrade < 55) 
+    //             {
+    //                 Console.WriteLine(
+    //                     $"""
+    //                     Not Ortlamanız: {averageGrade}
+    //                     Dönem Sonu Notunuz: 2
+    //                     """
+    //                 );
+    //             } else if (25 <= averageGrade && averageGrade < 45) 
+    //             {
+    //                 Console.WriteLine(
+    //                     $"""
+    //                     Not Ortlamanız: {averageGrade}
+    //                     Dönem Sonu Notunuz: 1
+    //                     """
+    //                 );
+    //             } else if (0 <= averageGrade && averageGrade < 25) 
+    //             {
+    //                 Console.WriteLine(
+    //                     $"""
+    //                     Not Ortlamanız: {averageGrade}
+    //                     Dönem Sonu Notunuz: 0
+    //                     """
+    //                 );
+    //             } else { 
+    //                 Console.WriteLine("Not Girişinde Hata Yaptınız. Ortalama Hesaplanamadı.");
+    //             }
 
-//? Girilen 2 sayıdan en büyüğünü bulunuz.
+    //? Girilen 2 sayıdan en büyüğünü bulunuz.
 
-// Console.Write("Bir Sayı Giriniz: ");
-// int number1 = Convert.ToInt32(Console.ReadLine());
+    // Console.Write("Bir Sayı Giriniz: ");
+    // int number1 = Convert.ToInt32(Console.ReadLine());
 
-// Console.Write("Bir Sayı Daha Giriniz: ");
-// int number2 = Convert.ToInt32(Console.ReadLine());
+    // Console.Write("Bir Sayı Daha Giriniz: ");
+    // int number2 = Convert.ToInt32(Console.ReadLine());
 
-// if (number1 > number2)
-// {
-//     Console.WriteLine($"{number1} daha büyüktür");
-// }
-// else if (number2 > number1)
-// {
-//     Console.WriteLine($"{number2} daha büyüktür");
-// }
-// else
-// {
-//     Console.WriteLine("Sayılar eşit");
-// }
+    // if (number1 > number2)
+    // {
+    //     Console.WriteLine($"{number1} daha büyüktür");
+    // }
+    // else if (number2 > number1)
+    // {
+    //     Console.WriteLine($"{number2} daha büyüktür");
+    // }
+    // else
+    // {
+    //     Console.WriteLine("Sayılar eşit");
+    // }
 
-//? Ek Task 🚀 Bu konu için sana bir görev daha bırakıyorum: Öğrenci Burs Sistemi Kullanıcıdan: Not Ortalaması Devamsızlık Sayısı al. Ortalama >= 90 ve devamsızlık <= 3 → Tam Burs | Ortalama >= 75 ve devamsızlık <= 5 → Yarım Burs | Ortalama >= 60 ve devamsızlık <= 8 → Çeyrek Burs | Diğer durumlar → Burs Yok. Ekrana: Ortalama: Devamsızlık: Burs Durumu: yazdır.
+    //? Ek Task 🚀 Bu konu için sana bir görev daha bırakıyorum: Öğrenci Burs Sistemi Kullanıcıdan: Not Ortalaması Devamsızlık Sayısı al. Ortalama >= 90 ve devamsızlık <= 3 → Tam Burs | Ortalama >= 75 ve devamsızlık <= 5 → Yarım Burs | Ortalama >= 60 ve devamsızlık <= 8 → Çeyrek Burs | Diğer durumlar → Burs Yok. Ekrana: Ortalama: Devamsızlık: Burs Durumu: yazdır.
 
-// Console.Write("Not Ortalamanız: ");
-// int averageGrade = Convert.ToInt32(Console.ReadLine());
+    // Console.Write("Not Ortalamanız: ");
+    // int averageGrade = Convert.ToInt32(Console.ReadLine());
 
-// Console.Write("Devamsızlık Sayınız: ");
-// int absence = Convert.ToInt32(Console.ReadLine());
+    // Console.Write("Devamsızlık Sayınız: ");
+    // int absence = Convert.ToInt32(Console.ReadLine());
 
-// string scholarship;
+    // string scholarship;
 
-// if (averageGrade < 0 || absence < 0)
-//     {
-//         Console.WriteLine("Not Ortalaması / Devamsızlık Sıfırdan Küçük Olamaz.");
-//     } else
-//     {
-//         if (averageGrade >= 90 && absence <= 3)
-//         {
-//             scholarship = "Tam Burs";
-//         } else if (averageGrade >= 75 && absence <= 5)
-//         {
-//             scholarship = "Yarım Burs";
-//         } else if (averageGrade >= 60 && absence <= 8)
-//         {
-//             scholarship = "Çeyrek Burs";
-//         } else
-//         {
-//             scholarship = "Burs Yok";
-//         }
-//         Console.WriteLine(
-//             $"""
-//             Not Ortalaması: {averageGrade}
-//             Devamsızlık: {absence}
-//             Burs Durumu: {scholarship}
-//             """
-//         );
-//     }
+    // if (averageGrade < 0 || absence < 0)
+    //     {
+    //         Console.WriteLine("Not Ortalaması / Devamsızlık Sıfırdan Küçük Olamaz.");
+    //     } else
+    //     {
+    //         if (averageGrade >= 90 && absence <= 3)
+    //         {
+    //             scholarship = "Tam Burs";
+    //         } else if (averageGrade >= 75 && absence <= 5)
+    //         {
+    //             scholarship = "Yarım Burs";
+    //         } else if (averageGrade >= 60 && absence <= 8)
+    //         {
+    //             scholarship = "Çeyrek Burs";
+    //         } else
+    //         {
+    //             scholarship = "Burs Yok";
+    //         }
+    //         Console.WriteLine(
+    //             $"""
+    //             Not Ortalaması: {averageGrade}
+    //             Devamsızlık: {absence}
+    //             Burs Durumu: {scholarship}
+    //             """
+    //         );
+    //     }
 
-//? Kargo Ücreti Hesaplama Sistemi. Kullanıcıdan: Sipariş Tutarı Premium Üye mi? (E/H) al. Kurallar: 1000 TL ve üzeri → Kargo Ücretsiz | Premium üyeler → Her durumda Kargo Ücretsiz | Diğerleri → 99 TL kargo. Ekrana: Sipariş Tutarı: Premium Üye: Kargo Ücreti: Toplam Ödeme: yazdır.
+    //? Kargo Ücreti Hesaplama Sistemi. Kullanıcıdan: Sipariş Tutarı Premium Üye mi? (E/H) al. Kurallar: 1000 TL ve üzeri → Kargo Ücretsiz | Premium üyeler → Her durumda Kargo Ücretsiz | Diğerleri → 99 TL kargo. Ekrana: Sipariş Tutarı: Premium Üye: Kargo Ücreti: Toplam Ödeme: yazdır.
 
-// Console.Write("Sipariş Tutarınız: ");
-// decimal cost = Convert.ToDecimal(Console.ReadLine());
+    // Console.Write("Sipariş Tutarınız: ");
+    // decimal cost = Convert.ToDecimal(Console.ReadLine());
 
-// Console.Write("Premium Üyelik (E/H): ");
-// char premiumMember = char.ToUpper((Console.ReadLine() ?? string.Empty).FirstOrDefault());
+    // Console.Write("Premium Üyelik (E/H): ");
+    // char premiumMember = char.ToUpper((Console.ReadLine() ?? string.Empty).FirstOrDefault());
 
-// decimal shippingFee = 0m;
-// decimal totalCost = 0m;
-// string premiumStatus = premiumMember == 'E' ? "Üyelik Var" : "Üyelik Yok";
+    // decimal shippingFee = 0m;
+    // decimal totalCost = 0m;
+    // string premiumStatus = premiumMember == 'E' ? "Üyelik Var" : "Üyelik Yok";
 
-// if (cost <= 0)
-//     {
-//         Console.WriteLine("Sipariş Tutarı 0₺'den az olamaz");
-//     } else
-//     {
-//         if (cost < 1000 && premiumMember != 'E')
-//             {
-//                 shippingFee = 99m;
-//                 totalCost = cost + shippingFee;
-//             } else if (cost < 1000 && premiumMember =='E' || cost >= 1000)
-//             {
-//                 shippingFee = 0m;
-//                 totalCost = cost + shippingFee;
-//             } else
-//             {
-//                 Console.WriteLine("Hatalı Giriş");
-//             }
-//             Console.WriteLine(
-//             $"""
-//             Sipariş Tutarı: {cost:C} 
-//             Premium Üye: {premiumStatus}
-//             Kargo Ücreti: {shippingFee:C}
-//             Toplam Ödeme: {totalCost:C}
-//             """
-//         );
-//     }
+    // if (cost <= 0)
+    //     {
+    //         Console.WriteLine("Sipariş Tutarı 0₺'den az olamaz");
+    //     } else
+    //     {
+    //         if (cost < 1000 && premiumMember != 'E')
+    //             {
+    //                 shippingFee = 99m;
+    //                 totalCost = cost + shippingFee;
+    //             } else if (cost < 1000 && premiumMember =='E' || cost >= 1000)
+    //             {
+    //                 shippingFee = 0m;
+    //                 totalCost = cost + shippingFee;
+    //             } else
+    //             {
+    //                 Console.WriteLine("Hatalı Giriş");
+    //             }
+    //             Console.WriteLine(
+    //             $"""
+    //             Sipariş Tutarı: {cost:C} 
+    //             Premium Üye: {premiumStatus}
+    //             Kargo Ücreti: {shippingFee:C}
+    //             Toplam Ödeme: {totalCost:C}
+    //             """
+    //         );
+    //     }
 }
 //! DERS 33: Switch - Case
 {
@@ -2890,5 +2891,601 @@ using Microsoft.VisualBasic;
     //             {powerfull}: {power} HP
     //             """
     //         );
+}
+//! DERS 37: While Döngüsü
+{
+    // for (int i = 0; i <= 10; i++)
+    // {
+    //     Console.WriteLine(i);
+    // }
 
+    // int a = 0;
+    // while(a <= 10)
+    // {
+    //     Console.WriteLine(a);
+    //     a ++;
+    // };
+
+    // string[] names = {"ali","veli","ahmet"};
+
+    // int b = 0;
+
+    // while (b < names.Length)
+    // {
+    //     Console.WriteLine(names[b]);
+    //     b++;
+    // }
+
+    // char option = 'e';
+    // int counter = 1;
+    // int sum = 0;
+
+    // while (option == 'e')
+    // {
+    //     Console.Write($"{counter}. sayı: ");
+    //     sum += Convert.ToInt32(Console.ReadLine());
+
+    //     Console.Write("Devam Etmek İstiyor Musunuz?(e/h): ");
+    //     option = Convert.ToChar(Console.ReadLine());
+
+    //     counter ++;
+    // }
+    // Console.WriteLine($"{counter-1} adet sayının toplamı: {sum}");
+
+    //? Görev 1: Kullanıcı sayı girsin, 0 girene kadar devam etsin. Toplamı yazdır
+
+    // int exit = 1;
+    // int sum = 0;
+
+    // while (exit != 0)
+    // {
+    //     Console.Write("Sayı Giriniz: ");
+    //     int number = Convert.ToInt32(Console.ReadLine());
+    //     exit = number;
+    //     sum += number;
+    // }
+    // Console.WriteLine(sum);
+
+    //? Görev 2 (Unity Mantığı 🎮) Karakter canı: 100 Random hasar ver Can 0 olana kadar while ile devam et
+
+    // int health = 100;
+    // Console.WriteLine($"Başlangıç Canı: {health}");
+    // var rnd = new Random();
+    // int count = 0;
+
+    // while (health > 0)
+    // {   
+    //     count ++;
+    //     int damage = rnd.Next(101);
+    //     health -= damage;
+    //     Console.WriteLine(
+    //         $"""
+    //         {count}. Tur
+    //         Alınan Hasar: {damage}
+    //         Kalan Can: {(health < 0 ? 0 : health)}
+    //         """
+    //     );
+    // }
+    // Console.WriteLine("Kaybettiniz");
+
+    //? Görev 3 (Bir Tık Zor): Kullanıcıdan sayı al Negatif girene kadar devam et Girilen en büyük sayıyı bul
+
+    
+    // int number = 0;
+    // int maxNumber = 0;
+    
+    // while (number >= 0)
+    // {
+    //     Console.Write("Bir Sayı Giriniz: ");
+    //     number = Convert.ToInt32(Console.ReadLine());
+    
+    //     if (number > maxNumber)
+    //     {
+    //         maxNumber = number;
+    //     }
+        
+    // }
+    // Console.WriteLine($"Girilen En Büyük Sayı: {maxNumber}");
+
+    //? Görev 4: Bir Sonraki Seviye: Girilen: → en büyük → en küçük → ortalama 👉 Tek while içinde çöz
+
+    // int number;
+    // int minNumber = 100000;
+    // int maxNumber = 0;
+    // int sum = 0;
+    // int counter = 0;
+    
+
+    // while (true)
+    // {
+    //     Console.Write("Bir Sayı Giriniz (Çıkış İçin Negatif Değer): ");
+    //     number = Convert.ToInt32(Console.ReadLine());
+    //     if (number < 0) break;
+    //     sum += number;
+    //     counter ++;
+    //     if (number < minNumber) minNumber = number;
+    //     else if (number > maxNumber) maxNumber = number;
+    // }
+
+    // double avgNumber = (double)sum / counter;
+
+    // Console.WriteLine(
+    //     $"""
+    //     Girilen Sayı: {counter}
+    //     En Küçük Sayı: {minNumber}
+    //     Ortalama: {avgNumber}
+    //     En Büyük Sayı: {maxNumber}
+    //     """
+    // );
+}
+//! DERS 38: Break & Continue
+{
+    // string name = "Celal Selim";
+
+    // for (int i = 0; i < name.Length; i++)
+    // {
+    //     if (name[i] == ' ') continue;
+        
+    //     Console.WriteLine(name[i]);
+    // }
+
+    // for (int a = 0; a < name.Length; a++)
+    // {
+    //     if (name[a] == ' ') break;
+        
+    //     Console.WriteLine(name[a]);
+    // }
+
+    // int x = 0;
+
+    // while (x <= 20)
+    // {
+    //     x++;
+    //     if (x % 2 == 1) continue;
+    //     Console.WriteLine(x);
+        
+    // }
+
+    //? Görev 1: 1–100 arası: → 3’e bölünenleri atla (continue) → diğerlerini yazdır
+
+    // int num = 0;
+
+    // while (num <= 99)
+    // {
+    //     num ++;
+    //     if (num % 3 == 0) continue;
+    //     Console.WriteLine(num);
+    // }
+
+    //? Kullanıcı sayı girsin → 0 girerse break → negatif girerse continue (yok say) → sadece pozitifleri topla
+
+    // int sum = 0;
+
+    // while (true)
+    // {
+    //     Console.Write("Sayı Giriniz(Çıkış için 0): ");
+    //     int number = Convert.ToInt32(Console.ReadLine());
+    //     if (number == 0) break;
+    //     if (number < 0) continue;
+    //     sum += number;
+    // }
+    // Console.WriteLine(sum);
+
+    //? Görev 3 (Unity Mantığı 🎮) 10 tur: → random damage → eğer dodge olursa continue → can 0 olursa break
+
+    // var rnd = new Random();
+    // int health = 100;
+    // int count = 0;
+    
+
+    // while (count <= 10)
+    // {
+        
+    //     int damage = rnd.Next(21);
+    //     health -= damage;
+    //     if (health <= 0) break;
+    //     if (damage == 0) continue;
+    //     count ++;
+    //     Console.WriteLine(
+    //     $"""
+    //     {count}. Tur
+    //     Alınan Hasar: {damage}
+    //     Kalan Can: {health}
+    //     """
+    // );
+    // }
+}
+//! DERS 39: While Döngüsü Uygulama
+{
+    //? Kullanıcıya 1-100 arasında rastgele tutulan bir sayıyı buldurmaya çalış. 10 hak ver, aşağı ve yukarı yönlendirme yap. Kaçıncı tahmin? 
+
+    // int right = 10;
+    // int count = 0;
+    // var rnd = new Random();
+    // int number = rnd.Next(1,101);
+    // Console.WriteLine(number);
+
+    // while (right > 0)
+    // {
+        
+    //     Console.Write("1-100 arası sayı giriniz: ");
+    //     int guess = Convert.ToInt32(Console.ReadLine());
+    //     count ++;
+
+    //     if (guess == number) {
+    //         Console.WriteLine($"Tebrikler Kazandınız | {count} denemede bildiniz."); 
+    //         break;
+    //     };
+
+    //     right --;
+
+    //     if (right == 0) {
+    //         Console.WriteLine(
+    //             $"""
+    //             Hakkınız Kalmadı
+    //             Sayı: {number}
+    //             """);
+    //         break;
+    //     }    
+
+    //     if (guess > number) {
+    //         Console.WriteLine($"Aşağı ↓ | Kalan Hak: {right}");
+    //     } else if (guess < number) {
+    //         Console.WriteLine($"Yukarı ↑ | Kalan Hak: {right}");
+    //     }  
+    // }
+}
+//! DERS 40: Do-While Döngüsü Uygulama
+{
+    // int i = 1;
+    // do
+    // {
+    //     Console.WriteLine(i);
+    //     i++;
+    // } while (i < 10);
+
+    // Console.Write("Adet: ");
+    // int amount = Convert.ToInt32(Console.ReadLine());
+
+    // string[] products = new string[amount];
+    // int i = 0;
+
+    // do
+    // {
+    //     Console.Write("Ürün Adı: ");
+    //     products[i] = Console.ReadLine() ?? "Ürün Adı Yok";
+    //     i ++;
+    // } while (amount != i);
+
+    // Console.WriteLine("Ürünler Listeleniyor...");
+
+    // for (int a = 0; a < products.Length; a++)
+    // {
+    //     Console.WriteLine(products[a]);
+    // }
+
+    //? Görev 1: Kullanıcıdan sayı al. 0 girene kadar devam et (do-while ile) toplamı yazdır
+
+    // int number = 0;
+    // int sum = 0;
+
+    // do
+    // {
+    //    Console.Write("Bir Sayı Giriniz(Çıkış için 0): ");
+    //    number = Convert.ToInt32(Console.ReadLine());
+    //    sum += number;
+    // } while (number != 0);
+    // Console.WriteLine($"Girdiğiniz Sayıların Toplamı: {sum}");
+
+    //? Görev 2 (Zor) Kullanıcıdan ürün al. "exit" yazana kadar devam et.
+
+    // string product = "";
+
+    // do
+    // {
+    //     Console.Write("Ürün Adı(Çıkış: exit): ");
+    //     product = Console.ReadLine() ?? "Ürün Adı Yok";
+    // } while (product != "exit");
+
+    //? Görev 3 (Unity Mantığı 🎮) Oyun menüsü: 1- Başla 2- Çık Kullanıcı çık diyene kadar tekrar göster (do-while)
+
+    // int option = 0;
+    // do
+    // {
+    //     Console.Write(
+    //         """
+    //         1 → Başla
+    //         2 → Çık
+    //         Lütfen Seçiniz: 
+    //         """
+    //     );
+    //     option = Convert.ToInt32(Console.ReadLine());
+
+    //     if (option <= 0 || option > 2) {Console.WriteLine("Hatalı Seçim. Lütfen Tekrar Deneyiniz.");}
+
+    // } while (option != 2);
+
+    // Console.WriteLine("Çıkış Yaptınız");
+}
+//! DERS 41: Foreach Döngüsü
+{
+// string name = "Celal";
+// for (int i = 0; i < name.Length; i++) {
+// Console.WriteLine(name[i]);}
+
+// foreach(char letter in name) {
+// Console.WriteLine(letter);}
+
+// int[] numbers = {10, 20, 40, 45};
+
+// foreach(int number in numbers) {
+// if (number == 20) continue;
+// Console.WriteLine(number);}
+
+// foreach(int number in numbers) {
+// if (number == 20) break;
+// Console.WriteLine(number);}
+
+//? Bir int dizisi oluştur: int[] numbers = {10, 25, 30, 45, 60} → sadece 30’dan büyük sayıları yazdır
+
+// int[] numbers = {10, 25, 30, 45, 60};
+
+// foreach (int number in numbers)
+// {
+//     if (number > 30) Console.WriteLine(number);
+// }
+
+//? Bir string dizisi oluştur: string[] names = {"Ali", "Veli", "Ayşe", "Ahmet"} → sadece "A" ile başlayanları yazdır
+
+// string[] names = {"Ali", "Veli", "Ayşe", "Ahmet"};
+
+// foreach (string name in names)
+//     {
+//         if (name.StartsWith("A")) Console.WriteLine(name);
+//     }
+
+// foreach (string name in names)
+//     {
+//         if (name[0] == 'A') Console.WriteLine(name);
+//     }
+
+//? int[] numbers = {5, 10, 15, 20, 25} → sadece çift sayıların toplamını bul
+
+// int[] numbers = {5, 10, 15, 20, 25};
+// int sum = 0;
+
+// foreach (int number in numbers)
+//     {
+//         if (number % 2 == 0)
+//         {
+//             sum += number;
+//         }
+//     }
+// Console.WriteLine(sum);
+
+//? int[] numbers = {12, 45, 3, 78, 34} → en küçük sayıyı bul → en büyük sayıyı bul
+
+// int[] numbers = {12, 45, 3, 78, 34};
+// int maxNumber = 0;
+// int minNumber = 99999;
+
+// foreach (int number in numbers)
+//     {
+//         if (number > maxNumber)
+//         {
+//             maxNumber = number;
+//         }
+//         if (number < minNumber)
+//         {
+//             minNumber = number;
+//         }
+//     }
+//     Console.WriteLine(maxNumber);
+//     Console.WriteLine(minNumber);
+
+//? string[] enemies = {"Goblin", "Orc", "Troll"} → her düşman için: "X saldırıya uğradı!" yazdır
+
+// string[] enemies = {"Goblin", "Orc", "Troll"};
+
+// foreach (string enemy in enemies)
+//     {
+//         Console.WriteLine();
+//     }
+
+//? int[] enemyHealth = {100, 80, 120} → her düşmandan 20 can düş → yeni canları yazdır
+
+// int[] enemyHealth = {100, 80, 120};
+
+// foreach (int health in enemyHealth)
+//     {
+//         Console.WriteLine(
+//             $"""
+//             Hasar Öncesi Can: {health}
+//             Hasar Sonrası Can: {health - 20}
+//             """
+//         );
+//     }
+
+//? int[] numbers = {3, 7, 12, 18, 21, 24} → 3’e bölünen kaç sayı var? → yazdır
+
+// int[] numbers = {3, 7, 12, 18, 21, 24};
+// int counter = 0;
+
+// foreach (int number in numbers)
+//     {
+//         if (number % 3 == 0) counter ++;
+//     }
+// Console.WriteLine($"3'e tam bölünen sayı adedi: {counter}");
+
+//? string[] products = {"Laptop", "Mouse", "Keyboard", "Monitor", "Screen", "Wifi Adapter"} → içinde "o" harfi geçenleri yazdır
+
+// string[] products = {"Laptop", "Mouse", "Keyboard", "Monitor", "Screen", "Wifi Adapter"};
+
+// foreach (string product in products)
+//     {
+//         if (product.Contains("o")) Console.WriteLine(product);
+//     }
+}
+//! DERS 42: Dosya Okuma
+{
+    // StreamReader reading = File.OpenText("./fileManagement/readFile.txt");
+    // Console.WriteLine(reading.ReadLine()); //* Sadece tek satır okur
+
+    // using (StreamReader sr = File.OpenText("./fileManagement/readFile.txt")) //* Tüm İçeriği Okur
+    // {
+    //     string s;
+    //         while ((s = sr.ReadLine()) != null)
+    //         {
+    //             Console.WriteLine(s);
+    //         }
+    // }
+
+    // string sonuc = File.ReadAllText("./fileManagement/readFile.txt"); //* BP - Özellikle Küçük Dosyalar
+    // Console.WriteLine(sonuc);
+
+    // foreach (var line in File.ReadLines("./fileManagement/readFile.txt")) //* BP - Orta Boyutlu Dosyalar
+    //     {
+    //         Console.WriteLine(line);
+    //     }
+
+    //? Görev 1. Dosyadan okunan: → kaç satır var? → yazdır
+
+    // int counter = 0;
+
+    // foreach (string line in File.ReadLines("./fileManagement/readFile.txt"))
+    // {
+    //     counter ++;
+    // }
+    // Console.WriteLine($"Okunan Satır: {counter}");
+
+    //? Dosyada: → "error" geçen satırları yazdır
+
+    // foreach (string line in File.ReadLines("./fileManagement/readFile.txt"))
+    // {
+    //     if (line.ToLower().Contains("error")) Console.WriteLine(line);
+    // }
+
+    //? Görev 3 (Unity Mantığı 🎮) enemy.txt: Goblin Orc Troll → dosyadan düşmanları oku → foreach ile yazdır
+
+    // int number = 0;
+    // foreach (string line in File.ReadLines("./fileManagement/enemy.txt"))
+    // {
+    //     number ++;
+    //     Console.WriteLine($"{number}. Enemy: {line}");
+    // }
+}
+//! DERS 43: Dosyaya Bilgi Ekle/Çıkar
+{
+    // using(StreamWriter sw = File.CreateText("./fileManagement/readFile.txt")) { sw.WriteLine("Birinci Satır"); sw.WriteLine("İkinci Satır"); }
+
+    // foreach (var line in File.ReadLines("./fileManagement/readFile.txt"))
+    //     {
+    //         Console.WriteLine(line);
+    //     }
+
+    // using(StreamWriter sw = File.AppendText("./fileManagement/readFile.txt")) { sw.WriteLine("Üçüncü Satır"); sw.WriteLine("Dördüncü Satır"); }
+
+    // foreach (var line in File.ReadLines("./fileManagement/readFile.txt"))
+    //     {
+    //         Console.WriteLine(line);
+    //     }
+
+    // File.WriteAllText("./fileManagement/readFile.txt", "Selam, Tüm İçeriği Sildim.");
+    
+    // using (StreamReader reader = File.OpenText("./fileManagement/readFile.txt"))
+    // Console.WriteLine(reader.ReadLine());
+
+    // File.AppendAllText("./fileManagement/readFile.txt","İçeriğe Ekleme Yaptım.");
+    // foreach (string line in File.ReadLines("./fileManagement/readFile.txt"))
+    // {
+    //     Console.WriteLine(line);
+    // }
+}
+//! DERS 44: Klasörlerle Çalışma
+{
+// Directory.CreateDirectory("newFile"); // Doğrudan proje içinde oluşturur
+
+// Directory.CreateDirectory("./fileManagement/newFile"); // İlgili yolda klasör oluşturur
+
+// Directory.Delete("newFile"); // Yoldaki klasörü siler
+
+// if (Directory.Exists("newFile"))
+//     {
+//         Directory.Delete("newFile");
+//     } else
+//     {
+//         Console.WriteLine("Klasör Silinemedi ya da Çoktan Silinmiş");
+//     }
+
+//* Bilgisayarın herhangi bir yerinde oluşturmak için
+
+// string path = @"C:\Users\ASUS\Desktop\NewFile";
+// Directory.CreateDirectory(path);
+
+//? Görev 1: Logs klasörü oluştur → yoksa oluştur → varsa mesaj yaz
+//? Görev 2: Logs içine → log.txt oluştur → içine "Program başladı" yaz
+//? Görev 3 (OYUN SEVİYESİ) Saves klasörü oluştur → içine player.txt oluştur → içine HP:100 yaz
+//? Görev 4 (ZOR) Eğer Saves klasörü varsa: → içindeki tüm dosyaları listele
+
+// string basePath = Path.Combine("DZEL", "game");
+// string logsPath = Path.Combine(basePath, "logs");
+// string savesPath = Path.Combine(basePath, "saves");
+
+// string logFile = Path.Combine(logsPath, "log.txt");
+// string playerFile = Path.Combine(savesPath, "player.txt");
+
+// // Logs
+// if (!Directory.Exists(logsPath))
+// {
+//     Directory.CreateDirectory(logsPath);
+// }
+
+// File.AppendAllText(logFile, "Program Başladı\n");
+
+// // Saves
+// if (!Directory.Exists(savesPath))
+// {
+//     Directory.CreateDirectory(savesPath);
+// }
+
+// if (!File.Exists(playerFile))
+// {
+//     File.WriteAllText(playerFile, "HP: 100");
+// }
+
+// // Listeleme
+// Console.WriteLine("Save dosyaları:");
+
+// foreach (var file in Directory.GetFiles(savesPath))
+// {
+//     Console.WriteLine(file);
+// }
+}
+//! DERS 45: Dosya Yönetimi
+{
+//     string rootPath = Directory.GetCurrentDirectory();
+
+// //* Klasörleri al
+// string[] dirs = Directory.GetDirectories(
+//     rootPath,
+//     "*",
+//     SearchOption.TopDirectoryOnly
+// );
+
+// foreach (string dir in dirs)
+// {
+//     Console.WriteLine(dir);
+// }
+
+// //* Dosyaları al
+// string[] files = Directory.GetFiles(
+//     rootPath,
+//     "*",
+//     SearchOption.AllDirectories
+// );
+
+// foreach (string file in files)
+// {
+//     Console.WriteLine(file);
+// }
 }
