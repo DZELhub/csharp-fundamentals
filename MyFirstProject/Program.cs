@@ -53,7 +53,8 @@ namespace MyFirstProject
                 {44, Lesson44_Docs.Run},
                 {45, Lesson45_FileManagement.Run},
                 {46, Lesson46_ProgramClass.Run},
-                {47, Lesson47_ClassExercise.Run}
+                {47, Lesson47_ClassExercise.Run},
+                {48, Lesson48_Methods.Run}
             };
 
             while (true)
