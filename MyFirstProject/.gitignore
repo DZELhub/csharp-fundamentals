@@ -1,0 +1,17 @@
+# Build klasörleri
+bin/
+obj/
+
+# VS Code ayarları
+.vscode/
+
+# User / IDE dosyaları
+*.user
+*.suo
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Log dosyaları (istersen dahil etme)
+*.log
