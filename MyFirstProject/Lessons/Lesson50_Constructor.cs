@@ -1,34 +1,74 @@
-namespace MyFirstProject.Lessons {
-public static class Lesson50_Constructors{
-public static void Run()
+namespace MyFirstProject.Lessons
+{
+    public static class Lesson50_Constructors
+    {
+        public static void Run()
         {
-            Question question1 = new Question(1, "Hangisi programlama dili değildir", new string[5] {"Pyhton", "C#", "JavaScript", "Java", "HTML"},"HTML" );
+            Question question1 = new Question(
+                1,
+                "Hangisi programlama dili değildir?",
+                new string[] { "Python", "C#", "JavaScript", "Java", "HTML" },
+                "HTML"
+            );
 
-            Question question2 = new Question(2,"Hangisi en popüler programlama dilidir?",new string[5] {"Pyhton", "C#", "JavaScript", "Java", "HTML"}, "C#");
+            Question question2 = new Question(
+                2,
+                "Hangisi en popüler programlama dilidir?",
+                new string[] { "Python", "C#", "JavaScript", "Java", "HTML" },
+                "C#"
+            );
 
-            Question question3 = new Question(3, "Hangisi en popüler web programlama platfor mu değildir?",new string[5] {"Django", "Asp.net", "Spring", "Python", "HTML"},"Python");
+            Question question3 = new Question(
+                3,
+                "Hangisi web platformu değildir?",
+                new string[] { "Django", "Asp.net", "Spring", "Python", "HTML" },
+                "Python"
+            );
 
+            Question[] questions = { question1, question2, question3 };
+
+            foreach (var question in questions)
+            {
+                Console.WriteLine($"\n{question.QuestionText}");
+
+                foreach (var option in question.Options)
+                {
+                    Console.WriteLine(option);
+                }
+
+                Console.Write("Cevabınız: ");
+                string answer = Console.ReadLine() ?? "";
+
+                if (question.CheckAnswer(answer))
+                {
+                    Console.WriteLine("Doğru ✅");
+                }
+                else
+                {
+                    Console.WriteLine("Yanlış ❌");
+                }
+            }
         }
     }
 
     class Question
     {
-        public Question(int questionId, string questionText, string[] options, string answers)
+        public Question(int questionId, string questionText, string[] options, string correctAnswer)
         {
-            this.QuestionId = questionId;
-            this.QuestionText = questionText;
-            this.Options = options;
-            this.Answers = answers;
+            QuestionId = questionId;
+            QuestionText = questionText;
+            Options = options;
+            CorrectAnswer = correctAnswer;
         }
+
         public int QuestionId { get; set; }
         public string QuestionText { get; set; } = "";
         public string[] Options { get; set; } = Array.Empty<string>();
-        public string Answers { get; set; } = "";
+        public string CorrectAnswer { get; set; } = "";
 
-        public bool answerControl(string answer)
+        public bool CheckAnswer(string answer)
         {
-            return this.Answers.ToLower() == answer.ToLower();
+            return CorrectAnswer.Equals(answer, StringComparison.OrdinalIgnoreCase);
         }
     }
-
 }
