@@ -58,7 +58,8 @@ namespace MyFirstProject
                 {49, Lesson49_MethodsExercise.Run},
                 {50, Lesson50_Constructors.Run},
                 {51, Lesson51_AccessModifiers.Run},
-                {52, Lesson52_StaticMethods.Run}
+                {52, Lesson52_StaticMethods.Run},
+                {53, Lesson53_Collections.Run}
             };
 
             while (true)
