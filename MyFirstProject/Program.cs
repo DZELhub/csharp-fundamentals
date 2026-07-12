@@ -61,7 +61,8 @@ namespace MyFirstProject
                 {52, Lesson52_StaticMethods.Run},
                 {53, Lesson53_Collections.Run},
                 {54, Lesson54_ArrayList.Run},
-                {55, Lesson55_GenericList.Run}
+                {55, Lesson55_GenericList.Run},
+                {56, Lesson56_Dictionary.Run}
             };
 
             while (true)
