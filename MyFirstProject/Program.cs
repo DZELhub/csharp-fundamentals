@@ -60,7 +60,8 @@ namespace MyFirstProject
                 {51, Lesson51_AccessModifiers.Run},
                 {52, Lesson52_StaticMethods.Run},
                 {53, Lesson53_Collections.Run},
-                {54, Lesson54_ArrayList.Run}
+                {54, Lesson54_ArrayList.Run},
+                {55, Lesson55_GenericList.Run}
             };
 
             while (true)
