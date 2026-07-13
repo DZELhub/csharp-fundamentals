@@ -64,7 +64,8 @@ namespace MyFirstProject
                 {55, Lesson55_GenericList.Run},
                 {56, Lesson56_Dictionary.Run},
                 {57, Lesson57_Exception.Run},
-                {58, Lesson58_ExceptionHandling.Run}
+                {58, Lesson58_ExceptionHandling.Run},
+                {59, Lesson59_ExceptionThrowing.Run}
             };
 
             while (true)
